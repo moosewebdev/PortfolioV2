@@ -6,7 +6,7 @@ $(document).ready(function(){
         backSpeed: 35,
         backDelay: 450,
         loop: true,
-        cursorChar:"",
+        cursorChar:"|",
         contextType: 'html'
     });
   

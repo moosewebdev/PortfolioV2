@@ -31,13 +31,13 @@ h2 {
 
 }
 
-h3 {
+// h3 {
 
-}
+// }
 
-h4 {
+// h4 {
 
-}
+// }
 
 p {
   font-size: 1.5rem;
@@ -77,8 +77,11 @@ $text-Dark:#141C20;
 body{
   background-color:$primary-Dark;
 }
+.container {
+  max-width: 1040px;
+}
 
-button {
+.btn {
   margin-top:1rem;
   background-color: $accent;
   color: $text-Dark;
@@ -87,18 +90,32 @@ button {
   border:none;
   font-size:1.1rem;
   font-weight:600;
-  width:100%;
+  width:fit-content;
+  cursor: pointer;
+
+  
+
+  
 }
+
+.btn-Secondary {
+    border:2px solid $accent;
+    border-radius:.6rem;
+    padding:.6rem 1.5rem;
+}
+
 header {
   background-color:$primary-Dark-light;
   padding:1rem 1rem 1rem 1rem;
-
+  
+  
 
   .container {
-    
+    margin: 0 auto;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    
   }
   
 
@@ -162,7 +179,8 @@ header {
 #hero {
   display:flex;
   justify-content: center;
-  height: 80vh;
+  height:80vh;
+  
 
   .container {
     width:100%;
@@ -174,13 +192,13 @@ header {
     
 
     .hero-right {
-      margin-top:1rem;
+      
       margin-bottom:2rem;
       display: flex;
-      justify-content: center;
+      
 
       img {
-        height:250px;
+        width:150px;
       }
     }
   }
@@ -192,4 +210,85 @@ header {
 #work {
   background-color:$secondary-dark;
 }
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+  .btn {
+    width:fit-content;
+    }
+  .header {
+    .container {
+      #toggle{
+        display:none;
+      }
+      
+
+      .dMenu {
+        display:flex;
+
+        ul {
+          list-style: none;
+          display:flex;
+          flex-direction: row;
+          li {
+            display:inline;
+            padding-left:2rem;
+            margin:auto 0;
+            
+
+            a{
+              color:$white;
+              text-decoration: none;
+              font-size:1rem;
+              
+             
+
+            }
+             
+            
+          }
+        }
+      }
+    }
+  }
+
+  
+  h1 {
+    font-size:3rem;
+  }
+
+  #hero{
+    height: 60vh;
+    .container {
+      flex-direction:row;
+      padding-top:2rem;
+      align-items: center;
+      
+      .hero-left {
+        width:100%;
+        
+        
+
+      }
+
+      .hero-right{
+
+        img {
+          width:315px;
+        }
+      }
+
+     
+
+    }
+
+    
+  }
+
+  
+
+ }
 
