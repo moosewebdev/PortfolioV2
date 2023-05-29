@@ -59,6 +59,7 @@ $primary-Dark-light: #212E3E;
 $secondary-dark:#101824;
 $tertiary-color:#145A5E;
 $accent: #0ACAD6;
+$accent-2:rgba(10, 202, 214, 0.5);
 $white: #fff;
 $text-Light: rgb(255 255 255 / .8);
 $text-Dark:#141C20;
@@ -93,7 +94,9 @@ body{
   width:fit-content;
   cursor: pointer;
 
-  
+  &:hover {
+    background-color:$accent-2;
+  }
 
   
 }
@@ -102,6 +105,10 @@ body{
     border:2px solid $accent;
     border-radius:.6rem;
     padding:.6rem 1.5rem;
+
+    &:hover {
+      border-color: rgba(10, 202, 214, 0.5);
+    }
 }
 
 header {
@@ -179,7 +186,7 @@ header {
 #hero {
   display:flex;
   justify-content: center;
-  height:80vh;
+  max-height:550px;
   
 
   .container {
@@ -209,6 +216,14 @@ header {
 
 #work {
   background-color:$secondary-dark;
+  display:flex;
+  justify-content: center;
+
+
+  .container {
+
+   width:1040px;
+  }
 }
 
 
