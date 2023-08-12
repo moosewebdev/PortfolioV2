@@ -31,6 +31,14 @@ h2 {
 
 }
 
+.big-title {
+  font-size:5rem;
+}
+
+.small-title {
+  font-size:2rem;
+}
+
 // h3 {
 
 // }
@@ -62,12 +70,18 @@ $accent: #0ACAD6;
 $accent-2:rgba(10, 202, 214, 0.5);
 $white: #fff;
 $text-Light: rgb(255 255 255 / .8);
+$text-ultra-light: rgba(255, 255, 255, 0.1);
 $text-Dark:#141C20;
 .textWhite {
   color:$white;
 }
 .textLight {
   color:$text-Light;
+  
+}
+
+.textUltraLight {
+  color:$text-ultra-light;
 }
 
 .textAccent {
@@ -80,22 +94,45 @@ body{
 }
 .container {
   max-width: 1040px;
+  margin: 0 auto;
+    // display:flex;
+    // justify-content: space-between;
+    // align-items: center;
+  
 }
 
 .btn {
-  margin-top:1rem;
+  display:inline-block;
   background-color: $accent;
-  color: $text-Dark;
-  padding:1rem 1.5rem;
+  padding:1rem 1.8rem;
   border-radius: .6rem;
-  border:none;
-  font-size:1.1rem;
+  width:100%;
+  margin-top:1rem;
+ 
+  box-sizing: border-box;
+  text-decoration:none;
+  
   font-weight:600;
-  width:fit-content;
+  font-size:1.2rem;
+  color:$text-Dark;
+  text-align:center;
   cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  // 
+  // 
+  // color: $text-Dark;
+  // 
+  // 
+  // border:none;
+  // 
+  // font-weight:600;
+  // width:auto;
+  // align-content: center;
+  
 
   &:hover {
-    background-color:$accent-2;
+    //background-color:$accent-2;
+    background-color:#259FA7;
   }
 
   
@@ -105,6 +142,7 @@ body{
     border:2px solid $accent;
     border-radius:.6rem;
     padding:.6rem 1.5rem;
+    transition: border-color 0.2s ease-in;
 
     &:hover {
       border-color: rgba(10, 202, 214, 0.5);
@@ -186,7 +224,10 @@ header {
 #hero {
   display:flex;
   justify-content: center;
-  max-height:550px;
+  height:max-content;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
   
 
   .container {
@@ -205,7 +246,7 @@ header {
       
 
       img {
-        width:150px;
+        width:60%;
       }
     }
   }
@@ -218,14 +259,145 @@ header {
   background-color:$secondary-dark;
   display:flex;
   justify-content: center;
-  padding:0 1rem;
+  padding:3rem 1rem;
 
 
   .container {
-    width:1040px;
+    width:100%;
+    // padding:0rem 1rem 1rem 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content:center ;
    
+    .Wcontainer {
+      margin-bottom:5rem;
+
+      .tcontainer {
+        position:relative;
+      }
+    
+      .big-title-light{
+        color:#fff;
+      }
+    
+      .small-title{
+        position:absolute;
+        top: 50px;
+        border-bottom: #0ACAD6 5px solid;;
+      }
+    }
+  }
+
+  .card {
+    background-color:#172130;
+    //background-color:#222E40;
+    border-radius: 0.625rem;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
+    transition: all .2s ease-in-out;
+    margin-bottom:3rem;
+
+
+    &:hover {
+      background-color:#222E40;
+      transform:scale(1.02);
+    }
+
+    .Ccontainer {
+      display: flex;
+      padding: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      // align-self: stretch;
+     
+
+      .card-left {
+        display:flex;
+        flex-direction: column;
+        gap: 1.5625rem;
+        
+        
+  
+  
+        // 
+        // ;
+        .work-title {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+         align-self: stretch;
+
+         .holder {
+          display:flex;
+          flex-direction:column;
+          gap:.4rem;
+           span.companyTitle {
+            font-size:1.125rem;
+           
+            }
+        }
+
+        }
+        p.card-description {
+          font-size:1.25rem;
+        }
+    }
+    .card-right img {
+      border-radius:.5rem;
+      height:275px
+      
+    }
+    }
   }
 }
+
+.footer {
+  text-align: center;
+  background-color: #141D2B;
+  padding: 25px 10px 10px 10px;
+
+
+}
+
+.footer-logo {
+  margin-bottom: 5px;
+
+}
+
+.social-media {
+
+  margin-top: 10px;
+  
+  text-align: center;
+
+}
+
+.social-media a {
+  margin: 0px 10px 0px 10px;
+
+
+}
+
+.footer .tagline em {
+  font-size:1.25rem;
+  color: $text-Light;
+  margin: 0px 0px 10px 0px;
+}
+
+.footer-tagline p em span:first-child {
+  margin-left: 0;
+
+}
+
+.copyright span {
+  font-size: .75em;
+  color: #fff;
+  margin-top: 20px;
+
+
+}
+
 
 
 
@@ -278,9 +450,11 @@ header {
 
   #hero{
     
-    max-height:none;
-    height:80vh;
-
+    // max-height:none;
+     height:80vh;
+     max-height:550px;
+     padding-top: 0rem;
+     padding-bottom: 0rem;
     .container {
       flex-direction:row;
       padding-top:2rem;
@@ -308,8 +482,40 @@ header {
 
     
   }
-
   
+  #work {
+    background-color:$secondary-dark;
+    display:flex;
+    justify-content: center;
+    padding:3rem 1rem;
+  
+  
+    .container {
+      
+    
+  
+    .card {
+      
+  
+      .Ccontainer {
+        
+        flex-direction: row;
+        
+  
+        .card-left {
+          conten
+          
+          .work-title {
+            
+          }
+      }
+      .card-right img {
+        
+      }
+      }
+    }
+  }
+  }
 
  }
 
