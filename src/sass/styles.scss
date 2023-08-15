@@ -72,6 +72,8 @@ $white: #fff;
 $text-Light: rgb(255 255 255 / .8);
 $text-ultra-light: rgba(255, 255, 255, 0.1);
 $text-Dark:#141C20;
+$text-light-new: #CAD2E2;
+
 .textWhite {
   color:$white;
 }
@@ -86,6 +88,10 @@ $text-Dark:#141C20;
 
 .textAccent {
   color:$accent;
+}
+
+.textSecondaryDark {
+  color:$secondary-dark
 }
 
 
@@ -254,22 +260,7 @@ header {
   
 
 }
-
-#work {
-  background-color:$secondary-dark;
-  display:flex;
-  justify-content: center;
-  padding:3rem 1rem;
-
-
-  .container {
-    width:100%;
-    // padding:0rem 1rem 1rem 1rem;
-    display:flex;
-    flex-direction: column;
-    justify-content:center ;
-   
-    .Wcontainer {
+.Wcontainer {
       margin-bottom:5rem;
 
       .tcontainer {
@@ -286,15 +277,40 @@ header {
         border-bottom: #0ACAD6 5px solid;;
       }
     }
+
+.card {
+      background-color:#172130;
+      //background-color:#222E40;
+      border-radius: 0.625rem;
+      box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
+      transition: all .2s ease-in-out;
+      margin-bottom:3rem;
+}
+
+#work {
+  background-color:$secondary-dark;
+  display:flex;
+  justify-content: center;
+  padding:3rem 1rem;
+
+
+  .container {
+    width:100%;
+    // padding:0rem 1rem 1rem 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content:center ;
+   
+    
   }
 
   .card {
-    background-color:#172130;
-    //background-color:#222E40;
-    border-radius: 0.625rem;
-    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
-    transition: all .2s ease-in-out;
-    margin-bottom:3rem;
+    // background-color:#172130;
+    // //background-color:#222E40;
+    // border-radius: 0.625rem;
+    // box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
+    // transition: all .2s ease-in-out;
+    // margin-bottom:3rem;
 
 
     &:hover {
@@ -352,10 +368,15 @@ header {
   }
 }
 
+.about {
+  background: linear-gradient(107deg, rgba(246, 246, 246, 1) 0%, rgba(246, 246, 246, 1) 50%, rgba(215, 235, 238, 1) 50%, rgba(215, 235, 238, 1) 100%);
+}
+
 .footer {
   text-align: center;
   background-color: #141D2B;
   padding: 25px 10px 10px 10px;
+  margin-top: 2rem;
 
 
 }
@@ -399,7 +420,165 @@ header {
 }
 
 
+//project page
 
+.project-header {
+  width: 100%;
+  
+  background-image: url("");
+  
+  height:60vh;
+  overflow:hidden;
+ width:100%;
+    background-size:contain;
+  // background-position: center;
+  background-repeat: no-repeat;
+     min-height: 450px;
+  // max-height: 60vh;
+
+  
+}
+
+.pContainer {
+  max-width:764px;
+  margin: 0 auto;
+  padding: 0px 10px 0px 10px;
+  // color:#DBE2F0;
+  .Wcontainer {
+    margin-bottom:2rem;
+  }
+  p{
+    color:$text-light-new;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165%; /* 2.25rem */
+    
+    margin-bottom:2rem;
+  }
+
+  ol {
+    margin-left:3rem;
+    margin-right:3rem;
+    padding-left:2rem;
+    font-size:1.5rem;
+    margin-bottom:3rem;
+  }
+  ol li{
+    font-weight:300;
+    color:#DBE2F0;
+    padding-left:1rem;
+    margin-bottom:1rem;
+    
+  }
+  ol .innerList{
+    margin-left:0px;
+    
+  }
+
+}
+
+.proTitle {
+  font-size: 3rem;
+  margin-bottom:1.5rem;
+  margin-top:1.6rem;
+}
+
+p.proInfo {
+  margin-bottom: 0px;
+}
+.secImage {
+  margin:2rem auto;
+  
+  
+  .medImgContainer{
+    max-width: 990px;
+    margin: 0 auto;
+    
+    .lightb {
+
+      img {
+        border-radius:10px;
+        width:100%;
+        height:auto;
+      }
+    }
+  }
+
+  .lrgImgContainer {
+    
+    
+    
+  
+  }
+  .lrgImgContainer img {
+    width:100%;
+    height:auto;
+  }
+
+  
+}
+
+
+.secImage figcaption {
+  padding-top:.5rem;
+  text-align: center;
+}
+.slicer{
+  height:50vh;
+  margin:0;
+  width:100%;
+}
+
+.smlCard {
+  text-decoration: none;
+  width: 45%;
+  display: inline-block;
+  background-color: #172130;
+  border-radius: 1rem;
+  padding:1rem 2rem;
+  box-sizing: border-box;
+  position:relative;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .10);
+  transition: all .2s ease-in-out; 
+
+  &:hover {
+    background-color:#222E40;
+    transform:scale(1.02);
+  }
+
+
+}
+
+.leftB {
+  margin-right:1.5rem;
+  text-align: left;
+}
+.leftB span{
+  margin-left:.5rem;
+}
+
+.rightB span{
+  margin-right:.5rem;
+}
+
+
+.smlCard span {
+  color:#fff;
+  font-size:1.5rem;
+  
+}
+
+.smlCard img {
+  position:relative;
+  top:.6rem;
+}
+
+
+.rightB {
+  margin-right:1.5rem;
+  text-align: right;
+}
 
 
 @media only screen and (min-width: 600px) {
@@ -503,7 +682,7 @@ header {
         
   
         .card-left {
-          conten
+         
           
           .work-title {
             
@@ -516,6 +695,8 @@ header {
     }
   }
   }
+
+  
 
  }
 
