@@ -42,13 +42,25 @@ $(document).ready(function(){
 
 
     //smooth scrolling
-    scrollLink.click(function(e){
-        e.preventDefault();
-        $('body,html').animate({scrollTop:$(this.hash).offset().top -75}, 700);
-        responsiveNav.removeClass('rMenuShow');
-        togElement.html(oldIcon);
-        toggle = false;
-    });
+    // scrollLink.click(function(e){
+    //     e.preventDefault();
+    //     $('body,html').animate({scrollTop:$(this.hash).offset().top -75}, 700);
+    //     responsiveNav.removeClass('rMenuShow');
+    //     togElement.html(oldIcon);
+    //     toggle = false;
+    // });
+    scrollLink.click(function (e) {
+      e.preventDefault();
+      var targetHash = this.hash;
+      var targetElement = $(targetHash);
+  
+      if (targetElement.length) {
+          $('body,html').animate({ scrollTop: targetElement.offset().top - 10}, 700);
+          responsiveNav.removeClass('rMenuShow');
+          togElement.html(oldIcon);
+          toggle = false;
+      }
+  });
     
 
     //active link switch hide show nav bg

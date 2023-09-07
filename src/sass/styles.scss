@@ -25,10 +25,18 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight:600;
   line-height: 120%;
 
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.65rem;
+  margin-top: 2.1rem;
+  margin-bottom: 2rem;
 }
 
 .big-title {
@@ -49,7 +57,7 @@ h2 {
 
 p {
   font-size: 1.5rem;
-  font-weight:400;
+  font-weight:300;
   line-height: 165%;
 }
 
@@ -179,19 +187,27 @@ header {
   
     color:#fff;
     font-size:2rem;
-    z-index: 1001;
+    z-index: 1002;
   }
 
   .rMenu {
+    z-index: 1001;
     position:absolute;
     background-color: $tertiary-color;
+    opacity:0;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    display:none;
+    display:flex;
     flex-direction: column;
     justify-content: center;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90%  -20%  );
+
+    -webkit-transition: all .6s ease-out;
+
+    transition: all .6s ease-out;
 
     ul{
     li {
@@ -216,6 +232,21 @@ header {
   animation: blink .7s infinite;
 }
 
+.rMenuShow {
+  clip-path: circle(1000px at 90% 5%) !important;
+  -webkit-clip-path: circle(1000px at 90% 5%) !important;
+  opacity: 1 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex !important;
+
+
+}
+
+.rMenu ul li.rContact{
+  padding-top:.5rem;
+  
+}
 @keyframes blink {
   0% {
       opacity: 1;
@@ -442,31 +473,52 @@ header {
 .pContainer {
   max-width:764px;
   margin: 0 auto;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 1rem 0px 1rem;
   // color:#DBE2F0;
   .Wcontainer {
+    margin-top: 5rem;
     margin-bottom:2rem;
   }
   p{
-    color:$text-light-new;
+    
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 165%; /* 2.25rem */
     
     margin-bottom:2rem;
+
+    
   }
 
+  p.nName{
+    margin-bottom:0px !important;
+  }
+  .protoLinks {
+    list-style: none;
+    margin-bottom:4rem;
+    
+    }
+    .protoLinks li {
+      padding-bottom: 1rem;
+      
+      }
+    .protoLinks a{
+      font-size: 1.3rem;
+      color:#0ACAD6;
+      
+    }
   ol {
-    margin-left:3rem;
-    margin-right:3rem;
+    // margin-left:3rem;
+    // margin-right:3rem;
     padding-left:2rem;
     font-size:1.5rem;
     margin-bottom:3rem;
+    line-height: 165%;
   }
   ol li{
     font-weight:300;
-    color:#DBE2F0;
+    color: rgba(255, 255, 255, 0.8);
     padding-left:1rem;
     margin-bottom:1rem;
     
@@ -488,7 +540,7 @@ p.proInfo {
   margin-bottom: 0px;
 }
 .secImage {
-  margin:2rem auto;
+  margin:2rem 1rem;
   
   
   .medImgContainer{
@@ -505,12 +557,7 @@ p.proInfo {
     }
   }
 
-  .lrgImgContainer {
-    
-    
-    
-  
-  }
+ 
   .lrgImgContainer img {
     width:100%;
     height:auto;
@@ -532,7 +579,7 @@ p.proInfo {
 
 .smlCard {
   text-decoration: none;
-  width: 45%;
+  width: 100%;
   display: inline-block;
   background-color: #172130;
   border-radius: 1rem;
@@ -541,6 +588,7 @@ p.proInfo {
   position:relative;
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .10);
   transition: all .2s ease-in-out; 
+  margin-bottom:1rem;
 
   &:hover {
     background-color:#222E40;
@@ -551,8 +599,9 @@ p.proInfo {
 }
 
 .leftB {
-  margin-right:1.5rem;
-  text-align: left;
+  
+  
+  text-align: center;
 }
 .leftB span{
   margin-left:.5rem;
@@ -576,15 +625,29 @@ p.proInfo {
 
 
 .rightB {
-  margin-right:1.5rem;
-  text-align: right;
+  
+  
+  text-align: center;
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
 
   .btn {
     width:fit-content;
+    }
+    .smlCard {
+      
+      width: 45%;
+    }
+    .leftB {
+      margin-right:1.5rem;
+      text-align: left;
+    }
+    .rightB {
+      margin-right:1.5rem;
+      text-align: right;
+      
     }
   .header {
     .container {
@@ -626,6 +689,13 @@ p.proInfo {
   h1 {
     font-size:3rem;
   }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight:600;
+    line-height: 120%;
+  
+  }
 
   #hero{
     
@@ -661,7 +731,13 @@ p.proInfo {
 
     
   }
-  
+
+  .secImage {
+    margin: 2rem auto;
+  }
+  .pContainer {
+    padding: 0px 10px 0px 10px;
+  }
   #work {
     background-color:$secondary-dark;
     display:flex;
@@ -681,16 +757,8 @@ p.proInfo {
         flex-direction: row;
         
   
-        .card-left {
-         
-          
-          .work-title {
-            
-          }
-      }
-      .card-right img {
         
-      }
+      
       }
     }
   }
