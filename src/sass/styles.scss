@@ -56,8 +56,8 @@ h3 {
 // }
 
 p {
-  font-size: 1.5rem;
-  font-weight:300;
+  font-size: 1.4rem;
+  font-weight:400;
   line-height: 165%;
 }
 
@@ -77,7 +77,7 @@ $tertiary-color:#145A5E;
 $accent: #0ACAD6;
 $accent-2:rgba(10, 202, 214, 0.5);
 $white: #fff;
-$text-Light: rgb(255 255 255 / .8);
+$text-Light: rgb(255 255 255 / .7);
 $text-ultra-light: rgba(255, 255, 255, 0.1);
 $text-Dark:#141C20;
 $text-light-new: #CAD2E2;
@@ -481,9 +481,9 @@ header {
   }
   p{
     
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 165%; /* 2.25rem */
     
     margin-bottom:2rem;
@@ -509,25 +509,28 @@ header {
       
     }
   ol {
-    // margin-left:3rem;
-    // margin-right:3rem;
+    
     padding-left:2rem;
-    font-size:1.5rem;
+    font-size:1.4rem;
     margin-bottom:3rem;
     line-height: 165%;
   }
   ol li{
-    font-weight:300;
-    color: rgba(255, 255, 255, 0.8);
+    font-weight:400;
+    color: rgba(255, 255, 255, 0.7);
     padding-left:1rem;
     margin-bottom:1rem;
+    line-height: 150%;
     
   }
   ol .innerList{
     margin-left:0px;
     
   }
-
+  ol.innerList {
+    margin-top:1rem;
+    margin-bottom:0;
+}
 }
 
 .proTitle {
@@ -685,7 +688,10 @@ p.proInfo {
     }
   }
 
-  
+  ol {
+    margin-left:1.5rem;
+    // margin-right:3rem;
+  }
   h1 {
     font-size:3rem;
   }
