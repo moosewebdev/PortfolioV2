@@ -78,6 +78,7 @@ $accent: #0ACAD6;
 $accent-2:rgba(10, 202, 214, 0.5);
 $white: #fff;
 $text-Light: rgb(255 255 255 / .7);
+$h2Text-Light: rgb(255 255 255 / .8);
 $text-ultra-light: rgba(255, 255, 255, 0.1);
 $text-Dark:#141C20;
 $text-light-new: #CAD2E2;
@@ -87,6 +88,11 @@ $text-light-new: #CAD2E2;
 }
 .textLight {
   color:$text-Light;
+  
+}
+
+.H2Light {
+  color:$h2Text-Light;
   
 }
 
@@ -101,6 +107,12 @@ $text-light-new: #CAD2E2;
 .textSecondaryDark {
   color:$secondary-dark
 }
+
+figcaption a {
+  color:$accent;
+}
+
+
 
 
 body{
@@ -537,6 +549,16 @@ header {
   font-size: 3rem;
   margin-bottom:1.5rem;
   margin-top:1.6rem;
+}
+
+.blogTitle {
+  font-size: 3rem;
+  margin-bottom:1.5rem;
+  margin-top:3.5rem;
+}
+
+.navigationPage {
+  padding-top:3rem;
 }
 
 p.proInfo {
